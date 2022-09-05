@@ -6,25 +6,7 @@ var cal = new Date(); // init date and time
 var currentHour = cal.getHours(); // returns 0-23 on a 24 hour clock
 console.log(currentHour);
 
-$(document).ready(function () {
-  for (var i = 12; i < 21; i++) {
-    var rowDiv = document.querySelectorAll("row time-block");
-    var textDiv = document.querySelectorAll("col-8 description");
-    var hourDiv = document.querySelectorAll("col-2 hour");
-    var saveBtn = $("<button>").click(function () {
-      var num = $(this).attr("id");
-      var hourTxtBox = $(this).siblings("textarea").val();
-      localStorage.setItem("textarea-" + num, hourTxtBox);
-      console.log(hourTxtBox);
-    });
-    var icon = $("<i>").addClass("fas fa-save");
-    $(".container").append(
-      rowDiv.append(hourDiv, textDiv, saveBtn.append(icon))
-    );
-  }
-});
-
-for (var i = 12; i < 21; i++) {
+for (var i = 9; i < 18; i++) {
   if (i < currentHour) {
     document.getElementById("row-" + i).classList.add("past");
   } else if (i === currentHour) {
@@ -34,6 +16,21 @@ for (var i = 12; i < 21; i++) {
   }
 }
 
-// for (var i = 9; i < 18; i++) {
-//   //get the item from local storage, use i to select a particular txt area we want (adding val to txt area)
-// }
+$(document).ready(function () {
+  $(".saveBtn").on("click", function () {
+    var event = $(this).siblings(".description").val();
+    var time = $(this).parent().attr("id");
+
+    localStorage.setItem(time, event);
+  });
+  $("#row-9 .description").val(localStorage.getItem("row-9"));
+  $("#row-10 .description").val(localStorage.getItem("row-10"));
+  $("#row-11 .description").val(localStorage.getItem("row-11"));
+  $("#row-12 .description").val(localStorage.getItem("row-12"));
+  $("#row-13 .description").val(localStorage.getItem("row-13"));
+  $("#row-14 .description").val(localStorage.getItem("row-14"));
+  $("#row-15 .description").val(localStorage.getItem("row-15"));
+  $("#row-16 .description").val(localStorage.getItem("row-16"));
+  $("#row-17 .description").val(localStorage.getItem("row-17"));
+});
+// $("#row-12 .description").val(localStorage.getItem("row-12"));
