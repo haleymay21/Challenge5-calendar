@@ -1,0 +1,94 @@
+body {
+  font-family: "consolas";
+  font-size: 16px;
+  line-height: 1;
+}
+
+textarea {
+  background: transparent;
+  border: none;
+  resize: none;
+  color: #000000;
+  border-left: 1px solid black;
+  padding: 10px;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: rgb(46, 57, 46);
+  border-radius: 0;
+  border-bottom: 10px solid rgb(46, 57, 46);
+}
+
+/* highlight color for text in header */
+.highlight {
+  background-color: #90dd99;
+}
+
+/* highlight color for different hours */
+.highlight2 {
+  background-color: #06390e;
+}
+
+/* text style for current day and year */
+#currentDay {
+  font-size: 22px;
+  font-weight: 200px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/* styling for each part of the timeblocks */
+.description {
+  white-space: pre-wrap;
+}
+
+.time-block {
+  text-align: center;
+  border-radius: 15px;
+}
+
+.row {
+  white-space: pre-wrap;
+  height: 80px;
+  border-top: 1px solid white;
+}
+
+.hour {
+  background-color: #ffffff;
+  color: rgb(245, 248, 245);
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: bold;
+  border-top: 1px dashed #033003;
+}
+
+/* color changes for text boxes depending on time of day */
+.past {
+  background-color: #b9e3ab7c;
+  color: white;
+}
+
+.present {
+  background-color: #90dd99;
+  color: white;
+}
+
+.future {
+  background-color: #60af60;
+  color: white;
+}
+
+/* styling for button */
+.saveBtn {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #06390e;
+  color: white;
+}
+
+.saveBtn i:hover {
+  font-size: 40px;
+  transition: all 0.3s ease-in-out;
+}
