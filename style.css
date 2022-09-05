@@ -21,19 +21,24 @@ textarea {
   border-bottom: 10px solid rgb(46, 57, 46);
 }
 
+/* highlight color for text in header */
 .highlight {
   background-color: #90dd99;
 }
 
+/* highlight color for different hours */
 .highlight2 {
   background-color: #06390e;
 }
 
+/* text style for current day and year */
 #currentDay {
   font-size: 22px;
   font-weight: 200px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
+
+/* styling for each part of the timeblocks */
 .description {
   white-space: pre-wrap;
 }
@@ -58,6 +63,7 @@ textarea {
   border-top: 1px dashed #033003;
 }
 
+/* color changes for text boxes depending on time of day */
 .past {
   background-color: #b9e3ab7c;
   color: white;
@@ -73,6 +79,7 @@ textarea {
   color: white;
 }
 
+/* styling for button */
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
